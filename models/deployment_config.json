@@ -1,0 +1,203 @@
+{
+  "selected_model": "ensemble",
+  "ensemble_weight_dnn": 0.05,
+  "use_log": true,
+  "num_cols": [
+    "passenger_count",
+    "pickup_longitude",
+    "pickup_latitude",
+    "dropoff_longitude",
+    "dropoff_latitude",
+    "distance_km",
+    "manhattan_km",
+    "abs_lat_diff",
+    "abs_lon_diff",
+    "euclid_deg",
+    "bearing",
+    "distance_per_passenger",
+    "jfk_pickup",
+    "jfk_dropoff",
+    "lga_pickup",
+    "lga_dropoff",
+    "ewr_pickup",
+    "ewr_dropoff",
+    "midtown_pickup",
+    "midtown_dropoff",
+    "downtown_pickup",
+    "downtown_dropoff",
+    "central_park_pickup",
+    "central_park_dropoff",
+    "is_weekend",
+    "is_rush_hour"
+  ],
+  "cat_cols": [
+    "pickup_hour",
+    "pickup_dow",
+    "pickup_month",
+    "year_idx",
+    "pickup_cluster",
+    "dropoff_cluster"
+  ],
+  "cat_card": {
+    "pickup_hour": 24,
+    "pickup_dow": 7,
+    "pickup_month": 13,
+    "year_idx": 7,
+    "pickup_cluster": 20,
+    "dropoff_cluster": 20
+  },
+  "feature_order": [
+    "passenger_count",
+    "pickup_longitude",
+    "pickup_latitude",
+    "dropoff_longitude",
+    "dropoff_latitude",
+    "distance_km",
+    "manhattan_km",
+    "abs_lat_diff",
+    "abs_lon_diff",
+    "euclid_deg",
+    "bearing",
+    "distance_per_passenger",
+    "jfk_pickup",
+    "jfk_dropoff",
+    "lga_pickup",
+    "lga_dropoff",
+    "ewr_pickup",
+    "ewr_dropoff",
+    "midtown_pickup",
+    "midtown_dropoff",
+    "downtown_pickup",
+    "downtown_dropoff",
+    "central_park_pickup",
+    "central_park_dropoff",
+    "is_weekend",
+    "is_rush_hour",
+    "pickup_hour",
+    "pickup_dow",
+    "pickup_month",
+    "year_idx",
+    "pickup_cluster",
+    "dropoff_cluster"
+  ],
+  "feature_mean": [
+    1.6910481452941895,
+    -73.97626495361328,
+    40.750450134277344,
+    -73.97539520263672,
+    40.7508430480957,
+    3.3465497493743896,
+    4.312871932983398,
+    0.021447164937853813,
+    0.022886725142598152,
+    0.034280914813280106,
+    -17.419692993164062,
+    2.677398681640625,
+    20.848180770874023,
+    20.90258026123047,
+    9.637041091918945,
+    9.654794692993164,
+    18.299657821655273,
+    18.439043045043945,
+    2.960735321044922,
+    3.2463605403900146,
+    6.229404926300049,
+    6.440859794616699,
+    4.491437911987305,
+    4.6474714279174805,
+    0.2831750810146332,
+    0.279021292924881
+  ],
+  "feature_std": [
+    1.3065688610076904,
+    0.03438813239336014,
+    0.026905816048383713,
+    0.033972907811403275,
+    0.030886966735124588,
+    3.576295852661133,
+    4.730550765991211,
+    0.022948306053876877,
+    0.03371479734778404,
+    0.038365546613931656,
+    105.00215911865234,
+    3.1841840744018555,
+    2.906343460083008,
+    2.716165542602539,
+    2.462871789932251,
+    2.6101858615875244,
+    3.16414737701416,
+    3.270240068435669,
+    3.0455076694488525,
+    3.1965677738189697,
+    3.392268419265747,
+    3.5170581340789795,
+    3.252453565597534,
+    3.3693742752075195,
+    0.45054081082344055,
+    0.4485183656215668
+  ],
+  "airports": {
+    "jfk": [
+      40.6413,
+      -73.7781
+    ],
+    "lga": [
+      40.7769,
+      -73.874
+    ],
+    "ewr": [
+      40.6895,
+      -74.1745
+    ]
+  },
+  "landmarks": {
+    "midtown": [
+      40.7549,
+      -73.984
+    ],
+    "downtown": [
+      40.7069,
+      -74.0113
+    ],
+    "central_park": [
+      40.7829,
+      -73.9654
+    ]
+  },
+  "rush_hours": [
+    7,
+    8,
+    9,
+    16,
+    17,
+    18
+  ],
+  "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+  ],
+  "n_clusters": 20,
+  "dnn_metrics": {
+    "MAE": 1.453743815422058,
+    "MSE": 11.626690864562988,
+    "RMSE": 3.409793375640669,
+    "R2": 0.8716049790382385
+  },
+  "lgbm_metrics": {
+    "MAE": 1.3545230489450721,
+    "MSE": 10.40713760946852,
+    "RMSE": 3.2260095488805547,
+    "R2": 0.8850726357527701
+  },
+  "ensemble_metrics": {
+    "MAE": 1.3549992109061773,
+    "MSE": 10.403632600246699,
+    "RMSE": 3.225466260906584,
+    "R2": 0.885111342022125
+  }
+}
