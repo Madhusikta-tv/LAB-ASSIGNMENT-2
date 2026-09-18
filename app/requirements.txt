@@ -1,7 +1,6 @@
 streamlit
 streamlit-folium
 folium
-tensorflow-cpu
 lightgbm
 scikit-learn==1.6.1
 pandas

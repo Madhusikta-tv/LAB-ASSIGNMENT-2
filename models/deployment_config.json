@@ -1,5 +1,6 @@
 {
-  "selected_model": "ensemble",
+  "selected_model": "lightgbm",
+  "deployment_note": "Trained as a DNN+LightGBM ensemble (see dnn_metrics/ensemble_metrics), but only LightGBM is loaded at inference time - the DNN's contribution was negligible (ensemble MAE $1.355 vs LightGBM-alone $1.3545) and dropping it removes the TensorFlow runtime dependency for lighter deployment.",
   "ensemble_weight_dnn": 0.05,
   "use_log": true,
   "num_cols": [

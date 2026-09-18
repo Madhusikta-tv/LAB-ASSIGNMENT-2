@@ -115,9 +115,9 @@ def apply_scenario(name):
 
 st.title("\U0001F695 NYC Taxi Fare Predictor")
 st.caption(
-    "Deep Feedforward Neural Network + LightGBM ensemble, trained on the full NYC Taxi Fare "
-    "Kaggle dataset with geo-clustered pickup/drop-off zones. Click the map to set pickup and "
-    "drop-off points."
+    "LightGBM model (selected from a DNN + LightGBM ensemble evaluated during training), trained "
+    "on the full NYC Taxi Fare Kaggle dataset with geo-clustered pickup/drop-off zones. Click the "
+    "map to set pickup and drop-off points."
 )
 
 map_col, form_col = st.columns([3, 2], gap="large")
@@ -269,10 +269,10 @@ with form_col:
             st.error(f"Prediction failed: {e}")
 
     with st.expander("Model performance (held-out test set)"):
-        for name, m_key in [("DNN", "dnn_metrics"), ("LightGBM", "lgbm_metrics"), ("Ensemble (deployed)", "ensemble_metrics")]:
+        for name, m_key in [("LightGBM (deployed)", "lgbm_metrics"), ("DNN (trained, not deployed)", "dnn_metrics"), ("Ensemble (trained, not deployed)", "ensemble_metrics")]:
             metrics = CONFIG.get(m_key)
             if metrics:
                 st.markdown(f"**{name}** — MAE: ${metrics['MAE']:.3f} | RMSE: ${metrics['RMSE']:.3f} | R²: {metrics['R2']:.4f}")
-        w = CONFIG.get("ensemble_weight_dnn")
-        if w is not None:
-            st.caption(f"Deployed ensemble = {w:.2f} × DNN + {1 - w:.2f} × LightGBM (weighted by validation performance).")
+        note = CONFIG.get("deployment_note")
+        if note:
+            st.caption(note)
